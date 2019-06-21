@@ -1,0 +1,1 @@
+"0","plot(DF2017$Discapacidad/1000 , col=""blue"",xlab = ""Departamentos por numero 1-25"", ylab = """" , axes = FALSE)"

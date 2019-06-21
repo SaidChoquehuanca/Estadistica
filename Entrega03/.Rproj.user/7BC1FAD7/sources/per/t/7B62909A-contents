@@ -1,0 +1,63 @@
+---
+title: "Entrega03"
+output: html_document
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(scales)
+library(plotly)
+
+DF <- read_csv("DF2017.csv")
+
+```
+
+
+
+```{r}
+
+Departamentos <- DF$Departamento
+
+Embarazo <- DF$`%Embarazo_ado`
+
+Poblacionninis <- DF$Numero_ninis/1000
+
+```
+
+
+
+¿El porcentaje de embarazos adolescentes representa el 85% de población ninis?
+
+
+
+
+```{r}
+
+Cuadro8 = data.frame(Departamentos,Embarazo)
+
+Cuadro9 = data.frame(Departamentos, Poblacionninis)
+
+
+grafico = ggplot( Cuadro8, aes(Departamentos,Embarazo)) + geom_bar(stat='identity') + ggtitle(" Porcentaje de Embarazos por Departamento")
+
+
+print(grafico)
+
+plot(Cuadro9 , main='Población de Ninis en miles')
+
+plot(Cuadro8, main='Embarazo Adolescente')
+
+
+```
+
+
+
+
+
+
+
+
+
+
+

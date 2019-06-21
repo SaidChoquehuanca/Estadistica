@@ -1,0 +1,1 @@
+"0","plot(DF$Numero_ninis/1000, col=""red"", xlab = """" , ylab = "" Población  en Miles "")"

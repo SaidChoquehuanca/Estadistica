@@ -1,0 +1,1 @@
+"0","plot(x = DF2017$Numero_ninis, y = DF2017$`N° Delincuencia` ,pch=1, xlab=""Población de Ninis"", ylab =""Delincuencia"", col=""blue"",lwd=3, main=""Delincuencia vs. Población NiNi"")"

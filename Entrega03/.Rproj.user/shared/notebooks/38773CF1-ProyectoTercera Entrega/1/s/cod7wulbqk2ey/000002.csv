@@ -1,0 +1,1 @@
+"0","barplot(DF2017$Discapacidad, col = ""lightblue"",main = ""Población de d Ninis por región"", las=2, names.arg=(DF2017$Departamento),las=2,ylim=c(0,66000))"

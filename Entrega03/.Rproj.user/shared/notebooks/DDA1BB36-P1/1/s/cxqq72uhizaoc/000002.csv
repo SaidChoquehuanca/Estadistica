@@ -1,0 +1,2 @@
+"0","ninis_85_p1 = 0.85*DF$Numero_ninis[DF$Departamento=='Lima']"
+"0","emb_adol_p1 = (DF$`%Embarazo_ado`[DF$Departamento=='Lima'])/100*DF$Numero_ninis[DF$Departamento=='Lima']"

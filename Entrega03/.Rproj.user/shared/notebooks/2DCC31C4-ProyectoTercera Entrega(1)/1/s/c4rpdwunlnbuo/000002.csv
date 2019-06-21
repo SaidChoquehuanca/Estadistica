@@ -1,0 +1,3 @@
+"0","ggplot( data=DF2017,  mapping = aes(x =DF2017$Numero_ninis, y = DF2017$Discapacidad), las=3) + geom_point(alpha = 0.5) + labs( x = ""Población Ninis"","
+"0","        y = ""Discapacidad"",   # título del eje y"
+"0","        title = ""Población NiNi vs. discapacidad"" ) "

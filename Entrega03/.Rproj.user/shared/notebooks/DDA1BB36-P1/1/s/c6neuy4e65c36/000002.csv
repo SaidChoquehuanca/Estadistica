@@ -1,0 +1,7 @@
+"0","library(readr)"
+"0","library(tidyverse)"
+"0","library(scales)"
+"0","library(plotly)"
+"0","library(Lock5Data)"
+"2","Error in library(Lock5Data) : there is no package called ‘Lock5Data’
+"

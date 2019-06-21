@@ -1,0 +1,4 @@
+"0","Cuadro8 = data.frame(Departamentos,Embarazo)"
+"0","Cuadro9 = data.frame(Departamentos, Poblacionninis)"
+"0","grafico = ggplot( Cuadro8, aes(Departamentos,Embarazo)) + geom_bar(stat='identity') + ggtitle("" Porcentaje de Embarazos por Departamento"")"
+"0","print(grafico)"

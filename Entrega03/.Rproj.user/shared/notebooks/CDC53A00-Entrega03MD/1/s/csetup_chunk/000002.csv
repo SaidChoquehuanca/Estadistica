@@ -1,0 +1,20 @@
+"0","library(readr)"
+"0","library(tidyverse)"
+"0","library(scales)"
+"0","library(plotly)"
+"0","DF <- read_csv(""DF2017.csv"")"
+"2","Parsed with column specification:
+cols(
+  Departamento = [31mcol_character()[39m,
+  `Poblacion total` = [32mcol_double()[39m,
+  `Poblacion_14-19` = [32mcol_double()[39m,
+  Numero_ninis = [32mcol_double()[39m,
+  `N° matriculados` = [32mcol_double()[39m,
+  `% Necesidad_basica` = [32mcol_double()[39m,
+  Gastos_educacion = [32mcol_double()[39m,
+  `N° Delincuencia` = [32mcol_double()[39m,
+  `%Embarazo_ado` = [32mcol_double()[39m,
+  Discapacidad = [32mcol_double()[39m,
+  `Tasa_Ina_Esc%` = [32mcol_double()[39m
+)
+"
