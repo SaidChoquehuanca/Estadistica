@@ -5,7 +5,7 @@ output: html_notebook
 
 #IMPACTO SOCIAL DE LOS NINIS EN PERÚ EN EL 2017
 
-### Integrantes
+### Integrantes:
 
   * **Said Choquehuanca**
   * **Alexandra Levano**
@@ -13,7 +13,7 @@ output: html_notebook
   * **Andrea de la Cruz**
   * **Renzo Tenazoa**
 
-### Profesor
+### Profesor:
 
   * **José Renom**
   
