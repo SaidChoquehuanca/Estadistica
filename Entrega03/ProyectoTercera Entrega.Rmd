@@ -319,6 +319,20 @@ legend(x=24,y =25, legend = c("% Ninis", c("% Embarazos")),fill=c("blue","gray")
 
 De la gráfica, podemos decir que el porcentaje de embarazos adolescentes en cada departamento, o mejor aún, hablando del Perú en general, no afecta a la población de ninis, puesto que, supera en numeros a la cantidad de ninis por departamento. La cantidad de embarazos adolescete no determina, en pequeña medida quizá, la cantidad de ninis que hay en el Perú.
 
+PREGUNTAS PREDICTIVAS:
+
+ 16) ¿Es posible estabelcer una relación entre la delincuencia respecto el número de ninis en un departamento en el año 2017?
+ 
+```{r}
+plot(DF2017$Numero_ninis,DF2017$Discapacidad, pch=2, xlab="Población de Ninis", ylab ="Discapacidad", col="grey",lwd=3, main="Población NiNi vs. discapacidad")
+ml<-lm(D~n)
+summary(ml)
+abline(ml,col="blue")
+```
+Observamos que existe una relación entre nuestras variables que puede ser explicada con una recta, y vemos que esta es significativa porque el p-value es muy pequeño. Sin embargo, el valor de R cuadrado, es bajo, significa que nuestra grafica no explica las varianzas de los valores observados. Esto se puede deber a que existen otros varios factores en los departametos que alteran el numero de personas discapacitadas los cuales no están siendo considerados en la regresión. NUestra aproximacion puede ser utilizada para darnos una idea de como será la deliuencia respecto al número de ninis, pero tendríamos que tener en cuenta que este resultado no va a ser preciso.
+
+
+
 
 16) ¿Cómo cierta condiciones determinan a un nini en Perú?
 Una persona NINI es aquella que no estudia ni trabaja, sin embargo, existen múltiples factores tanto internos como externos que explican el porqué de su existencia. Nuestro trabajo se ha basado en relacionar gastos en educación, discapacidad, embarazos adolescentes, delincuencia juvenil con la población nini al punto de encontrar ciertas condiciones que pueden determinar a un NINI. Entre todas ellas, encontramos que el número de personas discapacitadas tienen mayor relación con la población nini que las otras variables. Esto tiene sentido, ya que la población de discapacitados no cuentan con el bienestar de salud comparado con adolescentes, de modo que tienen mayores dificultades tanto para estudiar y trabajar. 
