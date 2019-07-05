@@ -128,7 +128,7 @@ round(449623*100/2923478, digits = 3)
   3) ¿Cuál es la distribución de personas que sufren de algún tipo de discapacidad según departamento?
    
 ```{r}
-barplot(DF2017$Discapacidad, col = "lightblue",main = "Población de Ninis por región", las=2, names.arg=(DF2017$Departamento),las=2,ylim=c(0,66000))
+barplot(DF2017$Discapacidad, col = "lightblue",main = "Población de Ninis por región", las=2, names.arg=(DF2017$Departamento),las=2, ylim=c(0,66000))
 ```
 
 ```{r}
@@ -169,7 +169,7 @@ El mayor monto invertido en educación pordepartamento es de  20867.
 ```{r}
 ggplot( data=DF2017,  mapping = aes(x =DF2017$Numero_ninis, y = DF2017$Discapacidad), las=3) + geom_point(alpha = 0.5) + labs( x = "Población Ninis",
         y = "Discapacidad",   # título del eje y
-        title = "Población NiNi vs. Discapacidad")  
+        title = "Población NiNi vs. Discapacidad")   
 ```
 
   8) ¿Existe algún tipo de relación entre el número de alumnos matriculados con la población nini?

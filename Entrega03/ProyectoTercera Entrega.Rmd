@@ -128,7 +128,7 @@ round(449623*100/2923478, digits = 3)
   3) ¿Cuál es la distribución de personas que sufren de algún tipo de discapacidad según departamento?
    
 ```{r}
-barplot(DF2017$Discapacidad, col = "lightblue",main = "Población de Ninis por región", las=2, names.arg=(DF2017$Departamento),las=2,ylim=c(0,66000))
+barplot(DF2017$Discapacidad, col = "lightblue",main = "Población de Ninis por región", las=2, names.arg=(DF2017$Departamento),las=2, ylim=c(0,66000))
 ```
 
 ```{r}
@@ -169,7 +169,7 @@ El mayor monto invertido en educación pordepartamento es de  20867.
 ```{r}
 ggplot( data=DF2017,  mapping = aes(x =DF2017$Numero_ninis, y = DF2017$Discapacidad), las=3) + geom_point(alpha = 0.5) + labs( x = "Población Ninis",
         y = "Discapacidad",   # título del eje y
-        title = "Población NiNi vs. Discapacidad")  
+        title = "Población NiNi vs. Discapacidad")   
 ```
 
   8) ¿Existe algún tipo de relación entre el número de alumnos matriculados con la población nini?
@@ -212,16 +212,35 @@ plot(x = DF2017$Numero_ninis/1000, y = DF2017$`N° Delincuencia`/1000 ,pch=1, xl
 
   12) ¿El porcentaje de embarazos adolescentes representa el 50% de población promedio de ninis de rango de 14 a 19 años?
 
-H0: El porcentaje de embarazos adolescentes representa menos del 85% de población de ninis.
-H1:El porcentaje de embarazos adolescentes representa más del 85% de ninis en Lima.
+H0: El porcentaje de embarazos adolescentes representa menos del 50% de población de ninis.
+H1:El porcentaje de embarazos adolescentes representa más del 50% de ninis en Lima.
 
 ```{r}
-0.85*mean(DF2017$Numero_ninis/DF2017$`Poblacion_14-19`,na.rm=TRUE)
+ME_Ad<-0.5*mean(DF2017$Numero_ninis/DF2017$`Poblacion_14-19`,na.rm=TRUE)
 ```
 ```{r}
-t.test(DF2017$`%Embarazo_ado`,mu=0.1353187,conf.level = 0.95,alternative = "greater")
+TEST2<-t.test(DF2017$`%Embarazo_ado`,mu=ME_Ad,conf.level = 0.95,alternative = "greater")
+
+pvalor2<-TEST2$p.value
+pvalor2
+
+rechazo<-function(p)
+  {
+  return(pbinom(15,size=100,prob=p,lower.tail = FALSE))
+  }
+
+X<-seq(0,1,by=0.01)
+plot(X,rechazo(X),type="l",ylab="Probabilidad de nini",axes=FALSE,ylim=c(-0.1,1),xlab="Pvalor", main="50% de embarazos adolescentes representan población Nini")
+abline(v=0.05,col="red")
+abline(v=pvalor2,col="blue")
+axis(1)
+axis(2)
+arrows(0,-0.05,0.02,-0.05,code=3,length=0.1)
+text(0.5,-0.02,expression(H[0]),pos=1,adj=c(0,1))
+arrows(0.02,-0.05,1,-0.05,code=3,length=0.1)
+text(0,-0.02,expression(H[1]),pos=1,adj=c(0,1))
 ```
-Debido que p-value es menor al error, se rechaza H0 afirmando que el porcentaje de embarazadas representa más del 85% de población nini de 14 a 19 años.
+Debido que p-value es menor al error, se rechaza H0 afirmando que el porcentaje de embarazadas representa más del 50% de población nini de 14 a 19 años.
 
 
 
@@ -229,17 +248,30 @@ Debido que p-value es menor al error, se rechaza H0 afirmando que el porcentaje 
 
 El 50% de población nini es de:
 ```{r}
-0.5*mean(DF2017$Numero_ninis,na.rm=TRUE)
+PobN<-0.5*mean(DF2017$Numero_ninis,na.rm=TRUE)
 ```
 H0: El número de personas discapacitadas no bordea la media de población nini, por lo que no representa la mayoría total de población nini
 H1: El número de personas discapacitadas bordea la media de población nini, por lo que si representa la mayoría de la población nini.
 
 ```{r}
-t.test(DF2017$Discapacidad,mu=8811.82,conf.level = 0.95,alternative = "greater")
+TEST3<-t.test(DF2017$Discapacidad,mu=8811.82,conf.level = 0.95,alternative = "greater")
+pvalor3<-TEST3$p.value
+```
+
+```{r}
+plot(X,rechazo(X),type="l",ylab="Probabilidad de nn",axes=FALSE,ylim=c(-0.1,1),xlab="Pvalor", main="Prueba de hipótesis: Encontrar un NiNi")
+abline(v=0.05,col="red")
+abline(v=pvalor3,col="blue")
+axis(1)
+axis(2)
+arrows(0,-0.05,0.02,-0.05,code=3,length=0.1)
+text(0.5,-0.02,expression(H[0]),pos=1,adj=c(0,1))
+arrows(0.02,-0.05,1,-0.05,code=3,length=0.1)
+text(0,-0.02,expression(H[1]),pos=1,adj=c(0,1))
 ```
 
 
-  De acuerdo al p-value, este es mayor al alfa, no se rechaza H0, es decir queel número de personas discapacitadas no bordea el 50% de población nini. 
+  De acuerdo al p-value, este es mayor al alfa, no se rechaza H0, es decir que el número de personas discapacitadas no bordea el 50% de población nini. 
   
   14) ¿Hasta qué punto la población de discapacitados forman un parte representativa de la población de ninis?
 
@@ -287,6 +319,8 @@ Una persona NINI es aquella que no estudia ni trabaja, sin embargo, existen múl
 17) ¿En qué medida los embarazos adolescentes origina una alza de población nini?
 
 Según un informe del INEI (2018) afirma que aproximadamente nueve de cada diez madres abandonaron la escuela. Esto explica por qué existe una relación proporcional entre el porcentaje de embarazos adolescentes con el de ninis por cada región. Por otro lado, Mendoza y Subiría (2013) "un embarazo no planificado disminuye las posibilidades de continuar una transición hacia la vida adulta, en especial, si viven en condiciones de pobreza o pobreza extrema". De esta manera, vemos que este puede ser considerado un factor importante para el aumento de población nini, ya que un gran número de chicas adolescentes desertan en orden de realizar otras actividades para mantener a sus hijos. Sin embargo, debemos tomar en cuenta que las embarazadas adolescentes tienen más oportunidades de trabajo en comparación a las personas discapacitadas, ya que cuentan con ventajas a nivel físico y social.
+
+
 
 Referencias Bibliográficas:
 
