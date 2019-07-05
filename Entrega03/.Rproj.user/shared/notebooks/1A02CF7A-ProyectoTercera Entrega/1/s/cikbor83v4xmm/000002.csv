@@ -1,3 +1,0 @@
-"0","```r
-plot(x = DF2017$Numero_ninis/1000, y = DF2017$`NÂ° matriculados`/1000, pch=2, xlab=\"PoblaciÃ³n de Ninis(en miles)\", ylab =\"Alumnos matriculados(en miles)\", col=\"orange\",lwd=3, main=\"PoblaciÃ³n Nini vs. Alumnos matriculados\")
-```"

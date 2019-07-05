@@ -1,3 +1,0 @@
-"0","```r
-plot(DF2017$Numero_ninis/1000 ,col=\"red\", main = \"PoblaciÃ³n de Ninis por Departamento\" , xlab = \"Departamento por numero 1-25\" , ylab = \"Ninis en Miles \")
-```"

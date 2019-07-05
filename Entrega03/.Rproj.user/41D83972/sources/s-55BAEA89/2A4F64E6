@@ -8,13 +8,13 @@
     "hash" : "0",
     "id" : "2A4F64E6",
     "lastKnownWriteTime" : 1562298363,
-    "last_content_update" : 1562301413184,
+    "last_content_update" : 1562308796531,
     "path" : "~/GitHub/Estadistica/Entrega03/ProyectoTercera Entrega.Rmd",
     "project_path" : "ProyectoTercera Entrega.Rmd",
     "properties" : {
         "chunk_output_type" : "inline",
-        "cursorPosition" : "347,466",
-        "scrollLine" : "347"
+        "cursorPosition" : "131,3",
+        "scrollLine" : "114"
     },
     "relative_order" : 2,
     "source_on_save" : false,

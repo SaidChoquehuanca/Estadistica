@@ -34,3 +34,20 @@ abline(ml,col="blue")
 ```
 Como se puede observar, la aproxiamción hecha, no es significativa pues el p-valor es mucho mayor a uno, considerando (H0:la recta no es significativa), no se rechazaría una hipótesis. Además, el R cuadrado de la aproxiación es muy baja, por lo que la aproximación no explica las variaciones en los valores. Estos resultados se deben principalmente a que solo se estpa tomando un factor de muchos para explicar un valor.
 
+```{r}
+pormatri<-100*DF2017$`N° matriculados`/DF2017$`Poblacion total`
+```
+
+
+```{r}
+plot(100*DF2017$`N° matriculados`/DF2017$`Poblacion total`,100*DF2017$Numero_ninis/DF2017$`Poblacion total`, pch=2, ylab="Matriculados", xlab ="Discapacidad", col="grey",lwd=3, main="Discapacidad vs. Población de ninis")
+ml<-lm(porninis~pormatri)
+summary(ml)
+abline(ml,col="blue")
+```
+
+
+
+```{r}
+barplot(100*DF2017$Discapacidad/DF2017$`Poblacion total`, col = "lightblue",main = "Población de Ninis por región", las=2, names.arg=(DF2017$Departamento),las=2,ylim=c(0,3))
+```

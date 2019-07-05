@@ -1,3 +1,0 @@
-"0","```r
-plot(x = DF2017$Numero_ninis, y = DF2017$Discapacidad, pch=2, xlab=\"PoblaciÃ³n de Ninis\", ylab =\"Discapacidad\", col=\"grey\",lwd=3, main=\"PoblaciÃ³n NiNi vs. discapacidad\")
-```"
