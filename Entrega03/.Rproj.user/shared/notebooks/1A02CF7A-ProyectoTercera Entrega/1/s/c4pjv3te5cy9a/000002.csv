@@ -1,0 +1,9 @@
+"0","```r
+totalninis <- sum(DF2017$Numero_ninis,na.rm=TRUE)
+totalninis
+```"
+"1","[1] 440591
+"
+"0","```r
+barplot(((DF2017$Numero_ninis*100)/totalninis),col=\"blue\" ,xlab = \"Departamentos del 1-25\" , ylab = \"(%)PoblaciÃ³n Nini\" , main = \" Porcentaje de Ninis en el PerÃº por departamento\")
+```"

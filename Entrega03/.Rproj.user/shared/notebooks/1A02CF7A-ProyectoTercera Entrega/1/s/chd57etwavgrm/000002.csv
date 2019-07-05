@@ -1,0 +1,4 @@
+"0","```r
+Inversion<-c(20867,19884,14171)
+barplot(Inversion, names.arg =c(\"Moquegua\",\"Tumbes\",\"Amazonas\") , main = \"InversiÃ³n estatal por departamento\", ylim=c(0, 21000), col = c(\"45\",\"pink\",\"light green\"))
+```"

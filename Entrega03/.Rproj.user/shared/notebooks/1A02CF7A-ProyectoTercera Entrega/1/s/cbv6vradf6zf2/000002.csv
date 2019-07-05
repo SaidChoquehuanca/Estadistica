@@ -1,0 +1,18 @@
+"0","```r
+library(foreign)
+library(ggplot2)
+library(psych)
+```"
+"1","
+Attaching package: ã¤¼ã¸±psychã¤¼ã¸²
+
+The following objects are masked from ã¤¼ã¸±package:ggplot2ã¤¼ã¸²:
+
+    %+%, alpha
+"
+"0","```r
+library(growthrates)
+```"
+"1","Loading required package: lattice
+Loading required package: deSolve
+"
