@@ -1,3 +1,0 @@
-"0","Relacion_P= c(""1"",""6,8 y 9"",""7"",""5 y 6"",""16"",""2"",""16"",""3,10,13 y 14"",""6,8,9 y 11"",""16"",""12 y 15"")"
-"0","  Variable2 = c(""Género"",""Departamento"",""Número de actos delictivos(14-19)"",""Número de matriculados en universidades públicas y privadas"",""Tasa de asistencia escolar"",""Población de 14 a 19 años "",""Población total"",""Personas con alguna discapacidad"",""Gastos públicos por alumno en educación superior por departamento"",""Porcentaje de población con al menos una necesidad básica según departamentos"",""Porcentaje de embarazos adolescentes (14-17 años)"")"
-"0","  data.frame (cbind(Variable2,Relacion_P))"

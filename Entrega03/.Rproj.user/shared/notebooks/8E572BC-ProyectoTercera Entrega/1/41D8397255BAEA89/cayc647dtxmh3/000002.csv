@@ -1,1 +1,0 @@
-"0","ggplot(DF2017, aes(x = """", y = Numero_ninis, color= """")) + geom_boxplot() + xlab("""") +ylab(""Población Nini"")"
