@@ -1,5 +1,0 @@
-"0","```r
-```r
-plot(DF2017$Discapacidad/1000 ,col=\blue\, main = \Discapacitados por Departamento\ , xlab = \Departamento por numero 1-25\ , ylab = \Discapacitados en Miles\)
-```
-```"
