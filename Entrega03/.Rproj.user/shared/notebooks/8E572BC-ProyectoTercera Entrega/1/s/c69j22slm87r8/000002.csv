@@ -1,0 +1,62 @@
+"0","```r
+```r
+library(readr)
+DF2017 <- read_csv(\DF2017.csv\, col_types = cols(Numero_ninis = col_double()))
+install.packages(\foreign\)
+```
+```"
+"1","Installing package into Ã£Â¤Â¼Ã£Â¸Â±C:/Users/saidchoquehuanca/Documents/R/win-library/3.5Ã£Â¤Â¼Ã£Â¸Â²
+(as Ã£Â¤Â¼Ã£Â¸Â±libÃ£Â¤Â¼Ã£Â¸Â² is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.5/foreign_0.8-71.zip'
+Content type 'application/zip' length 324221 bytes (316 KB)
+downloaded 316 KB
+package Ã¢â‚¬ËœforeignÃ¢â‚¬â„¢ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\saidchoquehuanca\AppData\Local\Temp\RtmpY1zbms\downloaded_packages
+"
+"0","```r
+```r
+install.packages(\ggplot2\)
+```
+```"
+"1","Installing package into Ã£Â¤Â¼Ã£Â¸Â±C:/Users/saidchoquehuanca/Documents/R/win-library/3.5Ã£Â¤Â¼Ã£Â¸Â²
+(as Ã£Â¤Â¼Ã£Â¸Â±libÃ£Â¤Â¼Ã£Â¸Â² is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.5/ggplot2_3.2.0.zip'
+Content type 'application/zip' length 3950684 bytes (3.8 MB)
+downloaded 3.8 MB
+package Ã¢â‚¬Ëœggplot2Ã¢â‚¬â„¢ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\saidchoquehuanca\AppData\Local\Temp\RtmpY1zbms\downloaded_packages
+"
+"0","```r
+```r
+install.packages(\psych\)
+```
+```"
+"1","Installing package into Ã£Â¤Â¼Ã£Â¸Â±C:/Users/saidchoquehuanca/Documents/R/win-library/3.5Ã£Â¤Â¼Ã£Â¸Â²
+(as Ã£Â¤Â¼Ã£Â¸Â±libÃ£Â¤Â¼Ã£Â¸Â² is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.5/psych_1.8.12.zip'
+Content type 'application/zip' length 5910173 bytes (5.6 MB)
+downloaded 5.6 MB
+package Ã¢â‚¬ËœpsychÃ¢â‚¬â„¢ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\saidchoquehuanca\AppData\Local\Temp\RtmpY1zbms\downloaded_packages
+"
+"0","```r
+```r
+install.packages(\growthrates\)
+```
+```"
+"1","Installing package into Ã£Â¤Â¼Ã£Â¸Â±C:/Users/saidchoquehuanca/Documents/R/win-library/3.5Ã£Â¤Â¼Ã£Â¸Â²
+(as Ã£Â¤Â¼Ã£Â¸Â±libÃ£Â¤Â¼Ã£Â¸Â² is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/3.5/growthrates_0.7.2.zip'
+Content type 'application/zip' length 507000 bytes (495 KB)
+downloaded 495 KB
+package Ã¢â‚¬ËœgrowthratesÃ¢â‚¬â„¢ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\saidchoquehuanca\AppData\Local\Temp\RtmpY1zbms\downloaded_packages
+"

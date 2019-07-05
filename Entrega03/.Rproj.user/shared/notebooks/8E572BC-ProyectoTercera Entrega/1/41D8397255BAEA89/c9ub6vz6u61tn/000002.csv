@@ -1,0 +1,15 @@
+"0","library(foreign)"
+"0","library(ggplot2)"
+"0","library(psych)"
+"2","
+Attaching package: ‘psych’
+
+"
+"2","The following objects are masked from ‘package:ggplot2’:
+
+    %+%, alpha
+
+"
+"0","library(growthrates)"
+"2","Error in library(growthrates) : there is no package called â€˜growthratesâ€™
+"

@@ -1,0 +1,5 @@
+"0","```r
+```r
+barplot(DF2017$`%Embarazo_ado` , xlab = \Departamentos del 1-25\ , ylab = \(%)Porcentaje de Embarazos\ , main = \Porcentaje de embarazos adolescentes en el PerÃƒÂº\) 
+```
+```"

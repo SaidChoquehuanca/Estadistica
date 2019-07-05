@@ -1,0 +1,14 @@
+"0","```r
+```r
+barplot(DF2017$`%Embarazo_ado` , xlab = \Departamentos del 1-25\ , ylab = \(%)Porcentaje de Embarazos\ )
+par(new=TRUE)
+```
+```r
+barplot(((DF2017$Numero_ninis*100)/totalninis),col=\blue\ ,ylab = \\,xlab = \\ ,axes = FALSE)
+title(main = \ Porcentaje de Ninis y Embarazos Adolescentes \)
+```
+```r
+abline(a=0,b=0)
+legend(x=24,y =25, legend = c(\% Ninis\, c(\% Embarazos\)),fill=c(\blue\,\gray\))
+```
+```"

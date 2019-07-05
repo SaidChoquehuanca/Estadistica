@@ -1,0 +1,2 @@
+"0","library(readr)"
+"0","DF2017 <- read_csv(""DF2017.csv"", col_types = cols(Numero_ninis = col_double()))"

@@ -1,0 +1,7 @@
+"0","```r
+```r
+  Tipo_de_Variable = c(\CategÃƒÂ³rica Nominal\,\CategÃƒÂ³rica Nominal\,\CategÃƒÂ³rica Ordinal\,\NumÃƒÂ©rica Discreta\,\NumÃƒÂ©rica Discreta\,\NumÃƒÂ©rica Discreta\,\NumÃƒÂ©rica Discreta\,\NumÃƒÂ©rica Discreta\,\NumÃƒÂ©rica Continua\,\NumÃƒÂ©rica Continua\,\NumÃƒÂ©rica Continua\)
+  Variables = c(\GÃƒÂ©nero\,\Departamento\,\NÃƒÂºmero de actos delictivos(14-19)\,\NÃƒÂºmero de matriculados en universidades pÃƒÂºblicas y privadas\,\Tasa de asistencia escolar\,\PoblaciÃƒÂ³n de 14 a 19 aÃƒÂ±os \,\PoblaciÃƒÂ³n total\,\Personas con alguna discapacidad\,\Gastos pÃƒÂºblicos por alumno en educaciÃƒÂ³n superior por departamento\,\Porcentaje de poblaciÃƒÂ³n con al menos una necesidad bÃƒÂ¡sica segÃƒÂºn departamentos\,\Porcentaje de embarazos adolescentes (14-17 aÃƒÂ±os)\)
+  data.frame (cbind(Variables,Tipo_de_Variable))
+```
+```"

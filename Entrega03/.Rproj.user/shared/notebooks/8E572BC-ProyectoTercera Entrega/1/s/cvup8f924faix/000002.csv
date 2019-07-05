@@ -1,0 +1,5 @@
+"0","```r
+```r
+plot(x = DF2017$Numero_ninis, y = DF2017$Discapacidad, pch=2, xlab=\PoblaciÃƒÂ³n de Ninis\, ylab =\Discapacidad\, col=\grey\,lwd=3, main=\PoblaciÃƒÂ³n NiNi vs. discapacidad\)
+```
+```"

@@ -1,0 +1,36 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+DF2017 <- read_csv("DF2017.csv", col_types = cols(Numero_ninis = col_double()))
+```
+ 
+```{r}
+library(foreign)
+library(ggplot2)
+library(psych)
+library(growthrates)
+```
+
+
+PREGUNTAS PREDICTIVAS:
+
+ 18) ¿Cómo se relaciona el número de ninis respecto a la cantidad de personas discapacitadas en un departamento?
+
+```{r}
+porninis<-100*DF2017$Numero_ninis/DF2017$`Poblacion total`
+pordisca<-100*DF2017$Discapacidad/DF2017$`Poblacion total`
+```
+
+
+```{r}
+plot(100*DF2017$Discapacidad/DF2017$`Poblacion total`,100*DF2017$Numero_ninis/DF2017$`Poblacion total`, pch=2, ylab="Población de Ninis", xlab ="Discapacidad", col="grey",lwd=3, main="Discapacidad vs. Población de ninis")
+ml<-lm(porninis~pordisca)
+summary(ml)
+abline(ml,col="blue")
+```
+Como se puede observar, la aproxiamción hecha, no es significativa pues el p-valor es mucho mayor a uno, considerando (H0:la recta no es significativa), no se rechazaría una hipótesis. Además, el R cuadrado de la aproxiación es muy baja, por lo que la aproximación no explica las variaciones en los valores. Estos resultados se deben principalmente a que solo se estpa tomando un factor de muchos para explicar un valor.
+

@@ -1,1 +1,0 @@
-"0","plot(x = DF2017$Numero_ninis, y = DF2017$Discapacidad, pch=2, xlab=""Población de Ninis"", ylab =""Discapacidad"", col=""grey"",lwd=3, main=""Población NiNi vs. discapacidad"")"

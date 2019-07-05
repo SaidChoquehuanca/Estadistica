@@ -1,0 +1,6 @@
+"0","```r
+```r
+Matriculados<-c(48800,75200,143700)
+barplot(Matriculados,names.arg =c(\Moquegua\,\Tumbes\,\Amazonas\) ,col = c(\45\,\pink\,\light green\), main = \Alumnos matriculados por regiÃƒÂ³n\)
+```
+```"

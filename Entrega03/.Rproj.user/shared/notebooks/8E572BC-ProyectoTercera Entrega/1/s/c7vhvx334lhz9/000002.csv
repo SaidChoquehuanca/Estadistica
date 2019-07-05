@@ -1,0 +1,15 @@
+"0","```r
+t.test(DF2017$Discapacidad,mu=8811.82,conf.level = 0.95,alternative = \"greater\")
+```"
+"1","
+	One Sample t-test
+
+data:  DF2017$Discapacidad
+t = -0.32194, df = 24, p-value = 0.6249
+alternative hypothesis: true mean is greater than 8811.82
+95 percent confidence interval:
+ 3860.8    Inf
+sample estimates:
+mean of x 
+  8027.72 
+"

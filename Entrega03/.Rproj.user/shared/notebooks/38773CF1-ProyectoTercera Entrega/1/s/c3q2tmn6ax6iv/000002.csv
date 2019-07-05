@@ -1,2 +1,0 @@
-"0","totalninis <- sum(DF$Numero_ninis)"
-"0","barplot(((DF$Numero_ninis*100)/totalninis),col=""blue"" ,xlab = ""Departamentos del 1-25"" , ylab = ""(%)Población Nini"" , main = "" Porcentaje de Ninis en el Perú por departamento"")"

@@ -1,1 +1,0 @@
-"0","barplot(DF2017$Numero_ninis, col = ""lightcyan"",main = ""Población de Ninis por región"", las=2, names.arg=(DF2017$Departamento),las=2)"
