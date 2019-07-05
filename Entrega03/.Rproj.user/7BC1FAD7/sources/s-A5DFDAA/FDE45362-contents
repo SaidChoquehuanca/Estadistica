@@ -1,0 +1,340 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+#IMPACTO SOCIAL DE LOS NINIS EN PERÚ EN EL 2017
+
+### Integrantes
+
+  * **Said Choquehuanca**
+  * **Alexandra Levano**
+  * **Diego Galvan**
+  * **Andrea de la Cruz**
+  * **Renzo Tenazoa**
+
+### Profesor
+
+  * **José Renom**
+  
+## Cuarta entrega
+
+### Introducción 
+
+¿Qué pasaría si la población de ninis se reduce en Lima?. Los ninis son aquellos jóvenes que no estudian ni trabajan y se considera un fenómeno social debido que varias regiones de Latinoamérica cuentan con este problema. La causas de este sector de población son diversas y depende tanto del contexto económico del país como del entorno familiar de los jóvenes, estas conclusiones son emitidas por entidades internacionales y gubernamentales especializadas. El objetivo del trabajo es deducir cuáles podrían ser las futuras consecuencias si la población de los ninis disminuyera, al punto de  determinar si esta minoría social produce un gran impacto social, económico como político en la capital del Perú: Lima. Asimismo, la población objetivo son jóvenes egresados de colegios (estudios primarios o secundarios), ya que ellos pertenecen a nuestro grupo de estudio, su rango de edades puede fluctuar desde los 10 hasta los 21 años. No obstante, nos basaremos en datos estadísticos publicados que muestran preferentemente población en rangos de edad de 13 a 20 años.
+El principal actor interesado en estos datos comparativos que corroboran el marco teórico de esta realidad desde el punto de vista estadístico es el estado que también debe evaluar si sus políticas son fructíferas respecto a esta realidad.
+El alcance planeado basados en los estudios realizados anteriormente son de toda la población peruana y la incidencia de esta tendencia con respecto a América latina y su evolución. En referencia a estudios posteriores, solo se han emitido juicios especializados que tratan de explicar esta tendencia desde un perfil teórico. Sin embargo, no se han comprobado estas hipótesis por medios estadísticos. Por lo que no se pueden avalar estas hipótesis y ese es nuestro objetivo. Compararemos tendencias de población nini y la situación político-económico-social, tendencias de los jóvenes, interés público e intentos de revertir la situación, tasas de empleos y desempleos, problemas con algún tipo de adicción por consumo juvenil, acceso a redes sociales y medios de comunicación e influencias sobre ellos. Todas las variables las intentaremos comparar con las población NiNi y comprobaremos si existe alguna similitud. 
+Existen muchísimos estudios realizados anualmente por el estado como por universidades peruanas. La recolección de datos ya ha sido realizada por lo que no realizaremos ninguna recolección que involucre encuestas diseñadas por nosotros. Todos estos estudios han sido publicados y tenemos acceso total a ellos.
+Fuentes internacionales como el Banco Mundial; de divulgación científica, Red de revistas científicas de América Latina y El Caribe; entidades gubernamentales como la Cámara de comercio de Lima, el Minedu e INEI; y de universidades como la Pontificia Universidad Católica del Perú.
+
+
+### Objetivos Generales
+
+Dado que este grupo representa el 19.2% de la población juvenil peruana, es importante saber en qué medida este sector impacta en la capital a nivel económico, social como político. Es un tema relevante que si se estudia podría prevenirse y mejorar la calidad de vida de la población a largo plazo. Por tanto, nuestro objetivo es realizar un análisis estadístico que relacione las presumibles consecuencias (planteadas en un marco conceptual y presunciones nuestras) en caso los ninis decidan estudiar o trabajar.
+
+
+### Objetivos Específicos
+
+  * Responder con el apoyo de datos estadísticos, si la reducción de ninis en Lima producen un impacto positivo en el ámbito político, tales como la reducción la mejora de elección de candidatos y autoridades.
+  
+  * Responder con el apoyo de datos estadísticos, si la reducción de ninis en Lima producen un impacto positivo en el ámbito económico, tales como el alza del PBI.
+  * Responder con el apoyo de datos estadísticos, si la reducción de ninis en Lima producen un impacto positivo en el ámbito social, tales como la disminución de delincuencia en Lima, principalmente la delincuencia juvenil.
+  * Realización de gráficos que verifiquen la relación proporcional entre los ninis y los impactos políticos, económicos y sociales
+  
+### Variables
+
+```{r}
+
+  Tipo_de_Variable = c("Categórica Nominal","Categórica Nominal","Categórica Ordinal","Numérica Discreta","Numérica Discreta","Numérica Discreta","Numérica Discreta","Numérica Discreta","Numérica Continua","Numérica Continua","Numérica Continua")
+  Variables = c("Género","Departamento","Número de actos delictivos(14-19)","Número de matriculados en universidades públicas y privadas","Tasa de asistencia escolar","Población de 14 a 19 años ","Población total","Personas con alguna discapacidad","Gastos públicos por alumno en educación superior por departamento","Porcentaje de población con al menos una necesidad básica según departamentos","Porcentaje de embarazos adolescentes (14-17 años)")
+  data.frame (cbind(Variables,Tipo_de_Variable))
+```
+
+### Preguntas descriptivas y exploratorias
+```{r}
+  Pregunta = c("¿Cual es el porcentaje de hombres y mujeres respecto al número de población nini en el Perú?","¿Cual es el porcentaje de jóvenes de 14 a 19 años con respecto a la población nini en el Perú?","¿Cuál es la distribución de personas que sufren de algún tipo de discapacidad según departamento?","¿Cúal es el promedio de población de NiNis en el Perú?","¿A cuánto ascienden los gastos en educación por departamento?","¿Cuáles son los departamentos en los que más se invierte en educación?","¿Es proporcional el aumento o descenso de la población discapacitada con la de ninis?","¿Existe algún tipo de relación entre el número de alumnos matriculados con la población nini?","En los departamentos donde se invierte más en educación, ¿hay mayor cantidad de alumnos matriculados?","¿Cuál es la relación entre los actos delictivos y la presencia de ninis?","¿Las regiones con mayores gastos en educación tienen menos población nini?","¿El porcentaje de embarazos adolescentes representa el 85% de población ninis?","¿Es posible afirmar que el número de discapacitados representa el 50% de población promedio de ninis?","¿Hasta qué punto la población de discapacitados forman un parte representativa de la población de ninis?","¿En qué medida el porcentaje de maternidad adolescente influye en el aumento de porcentaje de población nini en Perú?","¿Cómo cierta condiciones determinan a un nini en Perú?")
+  Tipo = c("Descriptiva","Descriptiva","Descriptiva","Descriptiva","Descriptiva","Descriptiva","Exploratoria","Exploratoria","Exploratoria","Exploratoria","Inferencial","Inferencial","Inferencial","Causal","Causal","Mecanística")
+  data.frame (cbind(Pregunta,Tipo))
+```
+
+
+```{r}
+Relacion_P= c("1","6,8 y 9","7","5 y 6","16","2","16","3,10,13 y 14","6,8,9 y 11","16","12 y 15")
+  Variable2 = c("Género","Departamento","Número de actos delictivos(14-19)","Número de matriculados en universidades públicas y privadas","Tasa de asistencia escolar","Población de 14 a 19 años ","Población total","Personas con alguna discapacidad","Gastos públicos por alumno en educación superior por departamento","Porcentaje de población con al menos una necesidad básica según departamentos","Porcentaje de embarazos adolescentes (14-17 años)")
+  data.frame (cbind(Variable2,Relacion_P))
+```
+
+Los datos que se recolectan en orden de responder las preguntas descriptivas, exploratorias, inferenciales, causales y mecanísticas son datos estadísticos según departamentos brindados por el INEI.
+
+
+### Respondiendo las preguntas
+
+
+
+
+```{r}
+library(readr)
+DF2017 <- read_csv("DF2017.csv", col_types = cols(Numero_ninis = col_double()))
+install.packages("foreign")
+install.packages("ggplot2")
+install.packages("psych")
+install.packages("growthrates")
+```
+ 
+```{r}
+library(foreign)
+library(ggplot2)
+library(psych)
+library(growthrates)
+
+```
+
+```{r}
+head (DF2017)
+PTn = 309063
+
+```
+
+  1) ¿Cual es el porcentaje de hombres y mujeres respecto al número de población nini en el Perú?
+  
+
+ | POBLACIÓN NiNi        | 449623   |
+ |-----------------------|----------|
+ | POBLACIÓN TOTAL       | 29381884 |
+
+
+```{r}
+round(449623*100/29381884, digits=3)
+```
+  ***
+      El porcentaje de Ninis en el Perú es 1.53% de la población total
+  ***
+  
+  
+
+  2) ¿Cual es el porcentaje de jóvenes de 14 a 19 años con respecto a la población nini en el Perú?
+
+ | POBLACIÓN NiNi           | 449623   |
+ |--------------------------|----------|
+ | POBLACIÓN DE 14-19 AÑOS  | 2923478  |
+
+```{r}
+round(449623*100/2923478, digits = 3)
+```
+ ***
+         El porcentaje de Ninis en el Perú es 15.38% sobre la población juvenil de 14 a 19 años.
+ ***
+
+
+  3) ¿Cuál es la distribución de personas que sufren de algún tipo de discapacidad según departamento?
+   
+```{r}
+ordenp <- DF2017[order(DF2017$Discapacidad,decreasing = FALSE),]
+barplot(ordenp$Discapacidad, col = "lightblue",main = "Población de Discapacitados por región", las=2, names.arg=(ordenp$Departamento),las=2,ylim=c(0,66000))
+```
+
+```{r}
+sum(DF2017$Discapacidad)
+```
+
+  4) ¿Cúal es el promedio de población de NiNis en el Perú?
+  
+```{r}
+mean(DF2017$Numero_ninis,na.rm=TRUE)
+```
+```{r}
+median(DF2017$Numero_ninis,na.rm=TRUE)
+```
+  
+```{r}
+ggplot(DF2017, aes(x = "", y = Numero_ninis, color= "")) + geom_boxplot() + xlab("") +ylab("Población Nini")
+```
+La población promedio de Ninis es 13254 personas aproximadamente. 
+
+
+  5) ¿A cuánto ascienden los gastos en educación por departamento?
+```{r}
+datosorden <- DF2017[order(DF2017$Gastos_educacion,decreasing = FALSE),]
+
+barplot(dataorden$Gastos_educacion,col = "pink",main = "Gastos en educación por región ", las=2, names.arg=(dataorden$Departamento),las=2)
+
+```
+```{r}
+max(DF2017$Gastos_educacion)
+```
+El mayor monto invertido en educación pordepartamento es de  20867.
+
+  6) ¿Cuáles son los departamentos en los que más se invierte en educación?
+  
+  Según los datos, se observó que los departamentos de Moquegua y Tumbes destinan más presupuesto a educación.
+  
+  
+  7) ¿Es proporcional el aumento o descenso de la población discapacitada con la de ninis?
+
+```{r}
+ggplot( data=DF2017,  mapping = aes(x =DF2017$Numero_ninis, y = DF2017$Discapacidad), las=3) + geom_point(alpha = 0.5) + labs( x = "Población Ninis",
+        y = "Discapacidad",   # título del eje y
+        title = "Población NiNi vs. discapacidad") 
+ggplot( data=DF2017,  mapping = aes(x =DF2017$Numero_ninis, y = DF2017$Discapacidad), las=3) + geom_point(alpha = 0.5) + labs( x = "Población Ninis",
+        y = "Discapacidad",   # título del eje y
+        title = "Población NiNi vs. discapacidad") 
+
+
+```
+
+ 
+```{r}
+plot(x = DF2017$Numero_ninis, y = DF2017$Discapacidad, pch=2, xlab="Población de Ninis", ylab ="Discapacidad", col="grey",lwd=3, main="Población NiNi vs. discapacidad")
+```
+
+
+  8) ¿Existe algún tipo de relación entre el número de alumnos matriculados con la población nini?
+```{r}
+plot(x = DF2017$Numero_ninis/1000, y = DF2017$`N° matriculados`/1000, pch=2, xlab="Población de Ninis(en miles)", ylab ="Alumnos matriculados(en miles)", col="orange",lwd=3, main="Población Nini vs. Alumnos matriculados")
+```
+ Es posible observar una tendencia ascendente y una aparente relación entre ambos datos.
+ 
+ 9) En los departamentos donde se invierte más en educación, ¿hay mayor cantidad de alumnos matriculados?
+  
+|    DEPARTAMENTO     |       INVERSIÓN       |  ALUMNOS MATRICULADOS |   
+|:-------------------:|:---------------------:|:----------------------:
+|      Moquegua       |         20867         |        48800          |
+|       Tumbes        |         19884         |        75200          |
+|      Amazonas       |         14171         |        143700         |
+
+```{r}
+max(DF2017$`N° matriculados`)
+```
+```{r}
+Inversion<-c(20867,19884,14171)
+
+barplot(Inversion, names.arg =c("Moquegua","Tumbes","Amazonas") , main = "Inversión estatal por departamento", ylim=c(0, 21000), col = c("45","pink","light green"))
+```
+```{r}
+Matriculados<-c(48800,75200,143700)
+barplot(Matriculados,names.arg =c("Moquegua","Tumbes","Amazonas") ,col = c("45","pink","light green"), main = "Alumnos matriculados por región")
+```
+  
+  El departamento que tiene mayor inversión en educación tiene, contradictoriamente menor alumnado que los otros dos con menos inversión en educación. Los resultados son contrarios a losesperados, se esperaría mayor alumnado si se invierte más en educación.
+  
+  
+  10)¿Cuál es la relación entre los actos delictivos y la presencia de ninis?
+ 
+```{r}
+plot(x = DF2017$Numero_ninis/1000, y = DF2017$`N° Delincuencia`/1000 ,pch=1, xlab="Población de Ninis", ylab ="Delincuencia", col="blue",lwd=3, main="Delincuencia vs. Población NiNi (en miles)")
+
+```
+
+
+  12) ¿El porcentaje de embarazos adolescentes representa el 50% de población promedio de ninis de rango de 14 a 19 años?
+
+H0: El porcentaje de embarazos adolescentes representa menos del 85% de población de ninis.
+H1:El porcentaje de embarazos adolescentes representa más del 85% de ninis en Lima.
+
+```{r}
+0.85*mean(DF2017$Numero_ninis/DF2017$`Poblacion_14-19`,na.rm=TRUE)
+```
+```{r}
+t.test(DF2017$`%Embarazo_ado`,mu=0.1353187,conf.level = 0.95,alternative = "greater")
+```
+Debido que p-value es menor al error, se rechaza H0 afirmando que el porcentaje de embarazadas representa más del 85% de población nini de 14 a 19 años.
+
+
+
+  13) ¿Es posible afirmar que el número de discapacitados representa el 50% de población promedio de ninis?
+
+El 50% de población nini es de:
+```{r}
+0.5*mean(DF2017$Numero_ninis,na.rm=TRUE)
+```
+H0: El número de personas discapacitadas no bordea la media de población nini, por lo que no representa la mayoría total de población nini
+H1: El número de personas discapacitadas bordea la media de población nini, por lo que si representa la mayoría de la población nini.
+
+```{r}
+t.test(DF2017$Discapacidad,mu=8811.82,conf.level = 0.95,alternative = "greater")
+```
+
+
+  De acuerdo al p-value, este es mayor al alfa, no se rechaza H0, es decir queel número de personas discapacitadas no bordea el 50% de población nini. 
+  
+  14) ¿Hasta qué punto la población de discapacitados forman un parte representativa de la población de ninis?
+
+Primero analizemos el factor de población de ninis por cada departamento con un gráfico de puntos.
+
+
+Luego analizemos el factor de personas con discapacidad por departamento.
+
+Ahora combinemos ambas graficas, donde los Ninis son los puntos de color rojo y los Discapacitados de color azul :
+
+```{r}
+plot(DF2017$Numero_ninis/1000, col="red", xlab = "" , ylab = " Población  en Miles ")
+par(new=TRUE)
+plot(DF2017$Discapacidad/1000 , col="blue",xlab = "Departamentos por numero 1-25", ylab = "" , axes = FALSE)
+title(main = " Ninis y Discapacidad ")
+abline(a=0,b=0)
+legend(x=18,y =60, legend = c("N° Ninis",c("N° Discapacitados")),fill=c("red","blue"))
+
+```
+
+
+Como podemos observar del grafico, los puntos, tanto de los ninis como de los discapacitados, tienen una cercanía una de la otra, por lo  que de puede decir que parte de la población de ninis en el Perú se debe a los discapacitados, ya que forman una gran parte de estos.
+
+
+
+ 15) ¿En qué medida el porcentaje de maternidad adolescente influye en el aumento de porcentaje de población nini en Perú?
+ 
+Para poder saber si el porcentaje de embarazos adolescentes en el Perú afecta de alguna manera en el aumento del porcentaje de la población nini en el Perú, analizemos cada grafico por separado.
+
+En primer lugar, un gráfico de barras de porcentaje de embarazos en el Perú ordenados por departamento, cabe recalcar que los departamenos del 1-25 estan ordenados de manera alfabética.
+ 
+```{r}
+ordenemb <- DF2017[order(DF2017$`%Embarazo_ado`,decreasing = FALSE),]
+barplot(ordenemb$`%Embarazo_ado`, main = "Porcentaje de embarazos adolescentes en el Perú",las=2,names.arg=(ordenemb$Departamento),las=2) 
+```
+ 
+ 
+Luego, analizaremos el Porcentaje de Ninis en el Perú, para esto se hizo las formula para hallar el procentaje segun el total de nisni que habia en el 2017 según INEI.
+
+
+```{r}
+totalninis <- sum(DF2017$Numero_ninis,na.rm=TRUE)
+totalninis
+barplot(((DF2017$Numero_ninis*100)/totalninis),col="blue" ,xlab = "Departamentos del 1-25" , ylab = "(%)Población Nini" , main = " Porcentaje de Ninis en el Perú por departamento")
+
+```
+
+
+Por último, combinemos ambas gráficas y veamos :
+
+```{r}
+barplot(DF2017$`%Embarazo_ado` , xlab = "Departamentos del 1-25" , ylab = "(%)Porcentaje de Embarazos" )
+par(new=TRUE)
+barplot(((DF2017$Numero_ninis*100)/totalninis),col="blue" ,ylab = "",xlab = "" ,axes = FALSE)
+title(main = " Porcentaje de Ninis y Embarazos Adolescentes ")
+abline(a=0,b=0)
+legend(x=24,y =25, legend = c("% Ninis", c("% Embarazos")),fill=c("blue","gray"))
+
+```
+
+De la gráfica, podemos decir que el porcentaje de embarazos adolescentes en cada departamento, o mejor aún, hablando del Perú en general, no afecta a la población de ninis, puesto que, supera en numeros a la cantidad de ninis por departamento. La cantidad de embarazos adolescete no determina, en pequeña medida quizá, la cantidad de ninis que hay en el Perú.
+
+
+16) ¿Cómo cierta condiciones determinan a un nini en Perú?
+Una persona NINI es aquella que no estudia ni trabaja, sin embargo, existen múltiples factores tanto internos como externos que explican el porqué de su existencia. Nuestro trabajo se ha basado en relacionar gastos en educación, discapacidad, embarazos adolescentes, delincuencia juvenil con la población nini al punto de encontrar ciertas condiciones que pueden determinar a un NINI. Entre todas ellas, encontramos que el número de personas discapacitadas tienen mayor relación con la población nini que las otras variables. Esto tiene sentido, ya que la población de discapacitados no cuentan con el bienestar de salud comparado con adolescentes, de modo que tienen mayores dificultades tanto para estudiar y trabajar. 
+
+Referencias Bibliográficas:
+
+  Instituto nacional de estadística e informática.(2018, 15 setiembre). Instituto Nacional de Estadística e Informática. Recuperado 18 de junio, 2019, de https://www.inei.gob.pe/estadisticas/indice-tematico/sociales/
+  
+  Río, R. (2008). Embarazo Adolescente. Departamento de Pediatría y Cirugía infantil: Chile. Recuperado 18 de junio, 2019, de https://s3.amazonaws.com/academia.edu.documents/31929260/EMBARAZO_ADOLESCENTE.pdf 
+
+  INEI (Junio, 2018). Perú: Indicadores de Educación por departamento. Recuperado de:
+https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1529/libro.pdf
+
+  INEI (Julio, 2018). Estadísticas de Seguridad Ciudadana. Recuperado de:
+https://www.inei.gob.pe/media/MenuRecursivo/boletines/04-informe-tecnico-n04_estadisticas-seguridad-ciudadana-ene-jun2018.pdf
+
+  INEI (2018). Tasa de inasistencia escolar. Recuperado de:
+https://www.inei.gob.pe/estadisticas/indice-tematico/tasa-neta-de-asistencia-escolar-7757/
+
+

@@ -1,0 +1,2 @@
+"0","ordenemb <- DF2017[order(DF2017$`%Embarazo_ado`,decreasing = FALSE),]"
+"0","barplot(ordenemb$`%Embarazo_ado`, main = ""Porcentaje de embarazos adolescentes en el Perú"",las=2,names.arg=(ordenemb$Departamento),las=2) "

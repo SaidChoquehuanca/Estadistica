@@ -1,0 +1,2 @@
+"0","ordenp <- DF2017[order(DF2017$Discapacidad,decreasing = FALSE),]"
+"0","barplot(ordenp$Discapacidad, col = ""lightblue"",main = ""Población de Discapacitados por región"", las=2, names.arg=(ordenp$Departamento),las=2,ylim=c(0,66000))"

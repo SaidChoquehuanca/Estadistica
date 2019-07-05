@@ -1,0 +1,1 @@
+"0","barplot(dataorden$Gastos_educacion,col = ""pink"",main = ""Gastos en educación por región "", las=2, names.arg=(dataorden$Departamento),las=2)"
