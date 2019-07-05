@@ -345,7 +345,7 @@ ml<-lm(porninis~pordisca)
 summary(ml)
 abline(ml,col="blue")
 ```
-Como se puede observar, la aproxiamción hecha, no es significativa pues el p-valor es mucho mayor a uno, considerando (H0:la recta no es significativa), no se rechazaría una hipótesis. Además, el R cuadrado de la aproxiación es muy baja, por lo que la aproximación no explica las variaciones en los valores. Estos resultados se deben principalmente a que solo se estpa tomando un factor de muchos para explicar un valor.
+Como se puede observar, la aproxiamción hecha, no es significativa pues el p-valor es mucho mayor a uno, considerando (H0:la recta no es significativa), no se rechazaría esta hipótesis. Además, el R cuadrado de la aproxiación es muy baja, por lo que la aproximación no explica las variaciones en los valores. Estos resultados se deben principalmente a que solo se esta tomando un factor de muchos para explicar el número de ninis, el cual es más complejo de explicar.
 
 
 
