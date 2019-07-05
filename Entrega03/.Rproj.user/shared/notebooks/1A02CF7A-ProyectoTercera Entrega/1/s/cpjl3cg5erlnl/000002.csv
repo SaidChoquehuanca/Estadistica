@@ -1,5 +1,0 @@
-"0","```r
-Relacion_P= c(\"1\",\"6,8 y 9\",\"7\",\"5 y 6\",\"16\",\"2\",\"16\",\"3,10,13 y 14\",\"6,8,9 y 11\",\"16\",\"12 y 15\")
-  Variable2 = c(\"GÃ©nero\",\"Departamento\",\"NÃºmero de actos delictivos(14-19)\",\"NÃºmero de matriculados en universidades pÃºblicas y privadas\",\"Tasa de asistencia escolar\",\"PoblaciÃ³n de 14 a 19 aÃ±os \",\"PoblaciÃ³n total\",\"Personas con alguna discapacidad\",\"Gastos pÃºblicos por alumno en educaciÃ³n superior por departamento\",\"Porcentaje de poblaciÃ³n con al menos una necesidad bÃ¡sica segÃºn departamentos\",\"Porcentaje de embarazos adolescentes (14-17 aÃ±os)\")
-  data.frame (cbind(Variable2,Relacion_P))
-```"

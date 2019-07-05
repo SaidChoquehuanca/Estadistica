@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562255345496.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2447425030",
+    "id" : "432D469",
+    "lastKnownWriteTime" : 1562309313,
+    "last_content_update" : 1562309314066,
+    "path" : "~/GitHub/Estadistica/Entrega03/ProyectoTercera Entrega.Rmd",
+    "project_path" : "ProyectoTercera Entrega.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "171,51",
+        "scrollLine" : "165"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

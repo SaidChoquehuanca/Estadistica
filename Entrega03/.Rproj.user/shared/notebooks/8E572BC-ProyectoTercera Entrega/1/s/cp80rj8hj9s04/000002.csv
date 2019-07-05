@@ -1,5 +1,0 @@
-"0","```r
-```r
-barplot(DF2017$Gastos_educacion, col = \pink\,main = \PoblaciÃƒÂ³n de Ninis por regiÃƒÂ³n\, las=2, names.arg=(DF2017$Departamento),las=2)
-```
-```"

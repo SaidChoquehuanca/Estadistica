@@ -1,7 +1,0 @@
-"0","```r
-```r
-ggplot( data=DF2017,  mapping = aes(x =DF2017$Numero_ninis, y = DF2017$Discapacidad), las=3) + geom_point(alpha = 0.5) + labs( x = \PoblaciÃƒÂ³n Ninis\,
-        y = \Discapacidad\,   # tÃƒÂ­tulo del eje y
-        title = \PoblaciÃƒÂ³n NiNi vs. discapacidad\ ) 
-```
-```"

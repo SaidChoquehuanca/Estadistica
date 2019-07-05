@@ -1,3 +1,0 @@
-"0","```r
-ggplot(DF2017, aes(x = \"\", y = Numero_ninis, color= \"\")) + geom_boxplot() + xlab(\"\") +ylab(\"PoblaciÃ³n Nini\")
-```"

@@ -1,5 +1,0 @@
-"0","```r
-```r
-plot(x = DF2017$Numero_ninis/1000, y = DF2017$`NÃ‚Â° Delincuencia`/1000 ,pch=1, xlab=\PoblaciÃƒÂ³n de Ninis\, ylab =\Delincuencia\, col=\blue\,lwd=3, main=\Delincuencia vs. PoblaciÃƒÂ³n NiNi (en miles)\)
-```
-```"
