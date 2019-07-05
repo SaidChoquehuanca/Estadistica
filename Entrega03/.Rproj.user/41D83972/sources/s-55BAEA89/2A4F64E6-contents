@@ -75,12 +75,12 @@ Los datos que se recolectan en orden de responder las preguntas descriptivas, ex
 ```{r}
 library(readr)
 DF2017 <- read_csv("DF2017.csv", col_types = cols(Numero_ninis = col_double()))
-install.packages("foreign")
-install.packages("ggplot2")
-install.packages("psych")
-install.packages("growthrates")
+#install.packages("foreign")
+#install.packages("ggplot2")
+#install.packages("psych")
+#install.packages("growthrates")
 ```
-
+ 
 ```{r}
 library(foreign)
 library(ggplot2)
@@ -152,7 +152,7 @@ La población promedio de Ninis es 13254 personas aproximadamente.
 
   5) ¿A cuánto ascienden los gastos en educación por departamento?
 ```{r}
-barplot(DF2017$Gastos_educacion, col = "pink",main = "Población de Ninis por región", las=2, names.arg=(DF2017$Departamento),las=2)
+barplot(DF2017$Gastos_educacion, col = "pink",main = "Gastos en educación por región", las=2, names.arg=(DF2017$Departamento),las=2)
 ```
 ```{r}
 max(DF2017$Gastos_educacion)
@@ -169,14 +169,8 @@ El mayor monto invertido en educación pordepartamento es de  20867.
 ```{r}
 ggplot( data=DF2017,  mapping = aes(x =DF2017$Numero_ninis, y = DF2017$Discapacidad), las=3) + geom_point(alpha = 0.5) + labs( x = "Población Ninis",
         y = "Discapacidad",   # título del eje y
-        title = "Población NiNi vs. discapacidad" ) 
+        title = "Población NiNi vs. Discapacidad")  
 ```
-
- 
-```{r}
-plot(x = DF2017$Numero_ninis, y = DF2017$Discapacidad, pch=2, xlab="Población de Ninis", ylab ="Discapacidad", col="grey",lwd=3, main="Población NiNi vs. discapacidad")
-```
-
 
   8) ¿Existe algún tipo de relación entre el número de alumnos matriculados con la población nini?
 ```{r}
@@ -249,30 +243,12 @@ t.test(DF2017$Discapacidad,mu=8811.82,conf.level = 0.95,alternative = "greater")
   
   14) ¿Hasta qué punto la población de discapacitados forman un parte representativa de la población de ninis?
 
-Primero analizemos el factor de población de ninis por cada departamento con un gráfico de puntos.
-
-```{r}
-
-plot(DF2017$Numero_ninis/1000 ,col="red", main = "Población de Ninis por Departamento" , xlab = "Departamento por numero 1-25" , ylab = "Ninis en Miles ")
-
-```
-
-
-Luego analizemos el factor de personas con discapacidad por departamento.
-
-```{r}
-
-plot(DF2017$Discapacidad/1000 ,col="blue", main = "Discapacitados por Departamento" , xlab = "Departamento por numero 1-25" , ylab = "Discapacitados en Miles")
-
-```
-
-Ahora combinemos ambas graficas, donde los Ninis son los puntos de color rojo y los Discapacitados de color azul :
 
 ```{r}
 plot(DF2017$Numero_ninis/1000, col="red", xlab = "" , ylab = " Población  en Miles ")
 par(new=TRUE)
 plot(DF2017$Discapacidad/1000 , col="blue",xlab = "Departamentos por numero 1-25", ylab = "" , axes = FALSE)
-title(main = " Ninis y Discapacidad ")
+title(main = " Ninis y Discapacidad por región ")
 abline(a=0,b=0)
 legend(x=18,y =60, legend = c("N° Ninis",c("N° Discapacitados")),fill=c("red","blue"))
 
@@ -285,25 +261,9 @@ Como podemos observar del grafico, los puntos, tanto de los ninis como de los di
 
  15) ¿En qué medida el porcentaje de maternidad adolescente influye en el aumento de porcentaje de población nini en Perú?
  
-Para poder saber si el porcentaje de embarazos adolescentes en el Perú afecta de alguna manera en el aumento del porcentaje de la población nini en el Perú, analizemos cada grafico por separado.
-
 En primer lugar, un gráfico de barras de porcentaje de embarazos en el Perú ordenados por departamento, cabe recalcar que los departamenos del 1-25 estan ordenados de manera alfabética.
  
-```{r}
-barplot(DF2017$`%Embarazo_ado` , xlab = "Departamentos del 1-25" , ylab = "(%)Porcentaje de Embarazos" , main = "Porcentaje de embarazos adolescentes en el Perú") 
-```
- 
- 
 Luego, analizaremos el Porcentaje de Ninis en el Perú, para esto se hizo las formula para hallar el procentaje segun el total de nisni que habia en el 2017 según INEI.
-
-
-```{r}
-totalninis <- sum(DF2017$Numero_ninis,na.rm=TRUE)
-totalninis
-barplot(((DF2017$Numero_ninis*100)/totalninis),col="blue" ,xlab = "Departamentos del 1-25" , ylab = "(%)Población Nini" , main = " Porcentaje de Ninis en el Perú por departamento")
-
-```
-
 
 Por último, combinemos ambas gráficas y veamos :
 
@@ -328,25 +288,55 @@ Una persona NINI es aquella que no estudia ni trabaja, sin embargo, existen múl
 
 Según un informe del INEI (2018) afirma que aproximadamente nueve de cada diez madres abandonaron la escuela. Esto explica por qué existe una relación proporcional entre el porcentaje de embarazos adolescentes con el de ninis por cada región. Por otro lado, Mendoza y Subiría (2013) "un embarazo no planificado disminuye las posibilidades de continuar una transición hacia la vida adulta, en especial, si viven en condiciones de pobreza o pobreza extrema". De esta manera, vemos que este puede ser considerado un factor importante para el aumento de población nini, ya que un gran número de chicas adolescentes desertan en orden de realizar otras actividades para mantener a sus hijos. Sin embargo, debemos tomar en cuenta que las embarazadas adolescentes tienen más oportunidades de trabajo en comparación a las personas discapacitadas, ya que cuentan con ventajas a nivel físico y social.
 
-
 PREGUNTAS PREDICTIVAS:
 
  18) ¿Cómo se relaciona el número de ninis respecto a la cantidad de personas discapacitadas en un departamento?
 
 ```{r}
-porninis<-100*DF2017$Numero_ninis/DF2017$`Poblacion total`
-pordisca<-100*DF2017$Discapacidad/DF2017$`Poblacion total`
+porninis<-100*DF2017$Numero_ninis/DF2017$`Poblacion_14-19`
+pordelin<-100*DF2017$`N° Delincuencia`/DF2017$`Poblacion total`
 ```
 
 
 ```{r}
-plot(100*DF2017$Discapacidad/DF2017$`Poblacion total`,100*DF2017$Numero_ninis/DF2017$`Poblacion total`, pch=2, ylab="Población de Ninis", xlab ="Discapacidad", col="grey",lwd=3, main="Discapacidad vs. Población de ninis")
-ml<-lm(porninis~pordisca)
+plot(100*DF2017$Numero_ninis/DF2017$`Poblacion total`,100*DF2017$`N° Delincuencia`/DF2017$`Poblacion total`, pch=2, ylab="Población de Ninis", xlab ="Discapacidad", col="grey",lwd=3, main="Discapacidad vs. Población de ninis")
+ml<-lm(pordelin~porninis)
 summary(ml)
 abline(ml,col="blue")
 ```
-Como se puede observar, la aproxiamción hecha, no es significativa pues el p-valor es mucho mayor a uno, considerando (H0:la recta no es significativa), no se rechazaría esta hipótesis. Además, el R cuadrado de la aproxiación es muy baja, por lo que la aproximación no explica las variaciones en los valores. Estos resultados se deben principalmente a que solo se esta tomando un factor de muchos para explicar el número de ninis, el cual es más complejo de explicar.
+Como se puede observar, la aproxiamción hecha, es significativa pues el p-valor es bajo, considerando (H0:la recta no es significativa), no se rechazaría una hipótesis. Además, el R cuadrado de la aproxiación es muy baja, por lo que la aproximación no explica las variaciones en los valores. Estos resultados se deben principalmente a que solo se esta tomando un factor de muchos para explicar un valor
 
+
+18) ¿Como se relaciona la población de ninis respecto a la cantidad de alumnos matriculados?
+
+```{r}
+pormatri<-100*DF2017$`N° matriculados`/DF2017$`Poblacion_14-19`
+```
+
+
+```{r}
+plot(pormatri, porninis , pch=2, ylab="Población de ninis", xlab ="Alumnos Matriculados", col="grey",lwd=3, main="Alumnos Matriculados vs. Población de ninis")
+ml<-lm(porninis~pormatri)
+summary(ml)
+abline(ml,col="blue")
+```
+Como se puede observar, la grafica aproximada cumple con ser significativa, pues su p-valor es muy bajo, considerando(H0:el modelo no es significativo). Sin embargo, el valor de R caudrado, es bajo, esto significa que las varianzas de los valores no son explicados por la aproximación de buena manera. Podríamos usar esta recta para tener una idea de la población de ninis sabiendo la cantidad de alumnos matriculados, pero este valor no sería preciso. El solo tomar un factor para determinar la población de ninis, lo cual es más complejo, hace que el valorde Rcuadrado sea alto.
+Es interesante resaltar que lo esperado hubiera sido que al haber más alumnos matriculados, haya menos cantidad de nini, pero el resultado no fue el esperado, sino que existe otro factor relacionado a la cantidad de alumnos matriculados y a la población de ninis que explicque ese comportamiento.
+
+19) ¿Se puede relacionarla población de ninis respecto a la cantidad mujere jovenes embarazadas?
+
+```{r}
+poremba<-100*DF2017$`%Embarazo_ado`/DF2017$`Poblacion_14-19`
+```
+
+
+```{r}
+plot(poremba, porninis , pch=2, ylab="Población de ninis", xlab ="Alumnos Matriculados", col="grey",lwd=3, main="Alumnos Matriculados vs. Población de ninis")
+ml<-lm(porninis~poremba)
+summary(ml)
+abline(ml,col="blue")
+```
+Como se observa, la aproximación no es ni significativa ni explica la varianza de los valores observados. 
 
 
 
