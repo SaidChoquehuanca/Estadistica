@@ -1,0 +1,1 @@
+"0","plot(pormatri, porninis , pch=2, ylab=""Población de ninis"", xlab =""Alumnos Matriculados"", col=""grey"",lwd=3, main=""Alumnos Matriculados vs. Población de ninis"")"

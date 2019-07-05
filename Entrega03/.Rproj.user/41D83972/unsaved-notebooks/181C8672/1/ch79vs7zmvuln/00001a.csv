@@ -1,0 +1,1 @@
+"0","plot(100*DF2017$Numero_ninis/DF2017$`Poblacion total`,100*DF2017$`N° Delincuencia`/DF2017$`Poblacion total`, pch=2, ylab=""Población de Ninis"", xlab =""Discapacidad"", col=""grey"",lwd=3, main=""Discapacidad vs. Población de ninis"")"

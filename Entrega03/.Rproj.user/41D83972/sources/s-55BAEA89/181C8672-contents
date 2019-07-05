@@ -21,30 +21,53 @@ PREGUNTAS PREDICTIVAS:
  18) ¿Cómo se relaciona el número de ninis respecto a la cantidad de personas discapacitadas en un departamento?
 
 ```{r}
-porninis<-100*DF2017$Numero_ninis/DF2017$`Poblacion total`
-pordisca<-100*DF2017$Discapacidad/DF2017$`Poblacion total`
+porninis<-100*DF2017$Numero_ninis/DF2017$`Poblacion_14-19`
+pordelin<-100*DF2017$`N° Delincuencia`/DF2017$`Poblacion total`
 ```
 
 
 ```{r}
-plot(100*DF2017$Discapacidad/DF2017$`Poblacion total`,100*DF2017$Numero_ninis/DF2017$`Poblacion total`, pch=2, ylab="Población de Ninis", xlab ="Discapacidad", col="grey",lwd=3, main="Discapacidad vs. Población de ninis")
-ml<-lm(porninis~pordisca)
+plot(100*DF2017$Numero_ninis/DF2017$`Poblacion total`,100*DF2017$`N° Delincuencia`/DF2017$`Poblacion total`, pch=2, ylab="Población de Ninis", xlab ="Discapacidad", col="grey",lwd=3, main="Discapacidad vs. Población de ninis")
+ml<-lm(pordelin~porninis)
 summary(ml)
 abline(ml,col="blue")
 ```
-Como se puede observar, la aproxiamción hecha, no es significativa pues el p-valor es mucho mayor a uno, considerando (H0:la recta no es significativa), no se rechazaría una hipótesis. Además, el R cuadrado de la aproxiación es muy baja, por lo que la aproximación no explica las variaciones en los valores. Estos resultados se deben principalmente a que solo se estpa tomando un factor de muchos para explicar un valor.
+Como se puede observar, la aproxiamción hecha, es significativa pues el p-valor es bajo, considerando (H0:la recta no es significativa), no se rechazaría una hipótesis. Además, el R cuadrado de la aproxiación es muy baja, por lo que la aproximación no explica las variaciones en los valores. Estos resultados se deben principalmente a que solo se esta tomando un factor de muchos para explicar un valor
+
+
+18) ¿Como se relaciona la población de ninis respecto a la cantidad de alumnos matriculados?
 
 ```{r}
-pormatri<-100*DF2017$`N° matriculados`/DF2017$`Poblacion total`
+pormatri<-100*DF2017$`N° matriculados`/DF2017$`Poblacion_14-19`
 ```
 
 
 ```{r}
-plot(100*DF2017$`N° matriculados`/DF2017$`Poblacion total`,100*DF2017$Numero_ninis/DF2017$`Poblacion total`, pch=2, ylab="Matriculados", xlab ="Discapacidad", col="grey",lwd=3, main="Discapacidad vs. Población de ninis")
+plot(pormatri, porninis , pch=2, ylab="Población de ninis", xlab ="Alumnos Matriculados", col="grey",lwd=3, main="Alumnos Matriculados vs. Población de ninis")
 ml<-lm(porninis~pormatri)
 summary(ml)
 abline(ml,col="blue")
 ```
+Como se puede observar, la grafica aproximada cumple con ser significativa, pues su p-valor es muy bajo, considerando(H0:el modelo no es significativo). Sin embargo, el valor de R caudrado, es bajo, esto significa que las varianzas de los valores no son explicados por la aproximación de buena manera. Podríamos usar esta recta para tener una idea de la población de ninis sabiendo la cantidad de alumnos matriculados, pero este valor no sería preciso. El solo tomar un factor para determinar la población de ninis, lo cual es más complejo, hace que el valorde Rcuadrado sea alto.
+Es interesante resaltar que lo esperado hubiera sido que al haber más alumnos matriculados, haya menos cantidad de nini, pero el resultado no fue el esperado, sino que existe otro factor relacionado a la cantidad de alumnos matriculados y a la población de ninis que explicque ese comportamiento.
+
+19) ¿Se puede relacionarla población de ninis respecto a la cantidad mujere jovenes embarazadas?
+
+```{r}
+poremba<-100*DF2017$`%Embarazo_ado`/DF2017$`Poblacion_14-19`
+```
+
+
+```{r}
+plot(poremba, porninis , pch=2, ylab="Población de ninis", xlab ="Alumnos Matriculados", col="grey",lwd=3, main="Alumnos Matriculados vs. Población de ninis")
+ml<-lm(porninis~poremba)
+summary(ml)
+abline(ml,col="blue")
+```
+Como se observa, la aproximación no es ni significativa ni explica la varianza de los valores observados. 
+
+
+
 
 
 
